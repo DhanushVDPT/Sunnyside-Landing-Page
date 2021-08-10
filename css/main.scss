@@ -1,0 +1,700 @@
+:root{
+    --standout-link: hsl(7, 99%, 70%);
+    --primary: hsl(51, 100%, 49%);
+    --graphic-design-text: hsl(167, 40%, 24%);
+    --photography-text: hsl(198, 62%, 26%);
+    --footer: hsl(168, 34%, 41%);
+    --footer-bg: #8FD4C5;
+    --footer-company: #246B5D;
+    --font-color: hsl(0, 0%, 100%);
+    --para-color: hsl(232, 10%, 55%);
+    --links: hsl(212, 27%, 19%);
+    --bg: #FEFBF9;
+    --desk-links: hsla(0, 0%, 100%, 0.877);
+    --btn-active: #77CCF3;
+    --hero: #5dc4f8;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Barlow', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    position: relative;
+    width: 100vw;
+
+    .row>*{
+        padding: 0;
+    }
+
+    .company{
+        font-family: 'Poppins', sans-serif;
+        font-weight: 900;
+    }
+    h1{
+        font-family: 'Fraunces', serif;
+        padding: 1.5em 1.5em 0.6em 1.5em;
+        font-size: 1.7em;
+        color: var(--links);
+    }
+    p{
+        color: var(--para-color);
+        font-size: 0.9em;
+        padding: 0 1.5em;
+    }
+    .learn-more{
+        padding-bottom: 3em;
+        padding-top: 0.8em;
+        a{
+            text-decoration: none;
+            font-family: 'Fraunces', serif;
+            color: var(--links);
+            text-transform: uppercase;
+            position: relative;
+            &::before{
+                content: " ";
+                background: var(--primary);
+                position: absolute;
+                width: 7.5em;
+                height: 0.4em;
+                border-radius: 60px;
+                bottom: 0.02em;
+                left: -2.8%;
+                opacity: 0.3;
+            }
+            &:hover{
+                &::before{
+                    opacity: 0.8;
+                }
+            }
+        }
+    }
+    .standout2{
+        .learn-more{
+            a{
+                &::before{
+                    background: var(--standout-link);
+                }
+            }
+        }
+    }
+    .top{
+        background-image: url("../images/mobile/image-header.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        height: 120vw;
+        width: 100%;
+    }
+    .navbar{
+        .container-fluid{
+            a{
+                color: var(--font-color);
+            }
+        }
+        #main-nav{
+            text-align: center;
+            padding: 0 2em;
+            #contact{
+                background-color: var(--primary);
+                border-radius: 25px;
+                padding: 0.5em 1.5em;
+                display: inline-block;
+                font-family: 'Fraunces', serif;
+                text-transform: uppercase;
+                &:hover{
+                    background-color: var(--btn-active);
+                    color: var(--font-color);
+                }
+                &:active{
+                    background-color: var(--btn-active);
+                    color: var(--font-color);
+                }
+            }
+        }
+    }
+
+    .hero{
+        position: relative;
+        font-family: 'Fraunces', serif;
+        text-align: center;
+        text-transform: uppercase;
+        color: var(--font-color);
+        .container-fluid{
+            h1{
+                margin: 1em auto;
+                color: var(--font-color);
+                font-size: 1.8em;
+                padding: 0;
+                letter-spacing: 0.2em;
+            }
+        }
+    }
+    .transform{
+        .container-fluid{
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        img{
+            width: 100%;
+        }
+    }
+    .standout{
+        .container-fluid{
+            margin: 0;
+            padding: 0;
+        }
+        img{
+            width: 100%;
+        }
+    }
+    .graphic{
+        background-image: url('../images/mobile/image-graphic-design.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding-top: 22em;
+        padding-bottom: 2em;
+        p, h1{
+            color: var(--graphic-design-text);
+        }
+        font-size: 0.8em;
+    }
+    .photography{
+        background-image: url('../images/mobile/image-photography.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        font-size: 0.8em;
+        padding-top: 22em;
+        padding-bottom: 2em;
+        p, h1{
+            color: var(--photography-text);
+        }
+    }
+
+    .testimonials{
+        background-color: var(--bg);
+        h1{
+            padding: 3em 0;
+            font-size: 0.8em;
+            text-transform: uppercase;
+            color: var(--para-color);
+            letter-spacing: 0.2em;
+        }
+        img{
+            border-radius: 50%;
+            width: 25%;
+        }
+        p{
+            padding-top: 2em;
+            font-size: 0.82em;
+            color: var(--links);
+        }
+        h3{
+            font-family: 'Fraunces', serif;
+            font-weight: 900;
+            color: var(--links);
+        }
+        .title{
+            padding-top: 0;
+            padding-bottom: 4em;
+            color: var(--para-color);
+            margin-bottom: 0;
+        }
+    }
+
+    .collage{
+        .container-fluid{
+            .row{
+                .col{
+                    margin: 0;
+                    padding: 0;
+                    img{
+                        object-fit: cover;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    .footer{
+        background-color: var(--footer-bg);
+        color: var(--footer);
+        h1{
+            color: var(--footer-company);
+        }
+        .container-fluid{
+            .options{
+                a{
+                    color: var(--footer);
+                    text-decoration: none;
+                    &:hover{
+                        color: var(--font-color);
+                    }
+                    &:active{
+                        color: var(--font-color);
+                    }
+                }
+            }
+        }
+        .contact{
+            padding: 2em 5em;
+        }
+    }
+
+    .sociallinks{
+        &:hover{
+            filter: brightness(0%) invert(100%);
+        }
+        &:active{
+            filter: brightness(0%) invert(100%);
+        }
+    }
+}
+
+@media only screen and (min-width: 425px) {
+    .graphic{
+        .container-fluid{
+            font-size: 1.2em;
+            h1{
+                padding-top: 5em;
+            }
+        }
+    }
+    .photography{
+        .container-fluid{
+            font-size: 1.4em;
+            h1{
+                padding-top: 5em;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    body{
+        .learn-more{
+            a{
+                &::before{
+                    bottom: 0.7em !important;
+                    left: 23% !important;
+                }
+            }
+        }
+        .navbar{
+            .container-fluid{
+                align-items: flex-start;
+            }
+            .navbar-brand{
+                color: var(--font-color);
+                padding-top: 0.5em;
+            }
+            .navbar-nav{
+                .nav-item{
+                    padding: 1em 2em 2em;
+                }
+            }
+            #main-nav{
+                #contact-box{
+                    padding-top: 0.5em;
+                }
+            }
+        }
+        .hero{
+            .container-fluid{
+                h1{
+                    color: var(--font-color);
+                    font-size: 3em;
+                    padding-top: 0;
+                    padding-bottom: 0.5em;
+                    margin-top: 2em;
+                }
+            }
+        }
+
+        .transform{
+            .container-fluid{
+                .transform2{
+                    font-size: 3em;
+                }
+            }
+        }
+
+        .standout{
+            .container-fluid{
+                .standout2{
+                    font-size: 2.8em;
+                }
+            }
+        }
+
+        .graphic{
+            .container-fluid{
+                font-size: 3em !important;
+            }
+        }
+
+        .photography{
+            .container-fluid{
+                font-size: 3em !important;
+            }
+        }
+
+        .testimonials{
+            .container-fluid{
+                .clientdivs{
+                    font-size: 1.2em !important;
+                }
+            }
+        }
+        .footer{
+            .options{
+                padding-left: 28em !important;
+                padding-right: 28em !important;
+            }
+            .contact{
+                padding: 2em 32em !important;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 525px) {
+    body{
+        .top{
+            height: 100vw;
+            .hero{
+                .container-fluid{
+                    h1{
+                        font-size: 2.4em;
+                    }
+                }
+            }
+        }
+
+        .transform{
+            .transform2{
+                padding-top: 2.5em;
+                padding-bottom: 2.5em;
+                height: 100vw;
+                align-content: center;
+                font-size: 1.2em;
+                h1{
+                    padding-top: 1em;
+                }
+            }
+        }
+
+        .standout{
+            .standout2{
+                height: 100vw;
+                padding-top: 2.5em;
+                padding-bottom: 2.5em;
+                font-size: 1.2em;
+                h1{
+                    padding-top: 1em;
+                }
+            }
+        }
+
+        .graphic{
+            min-height: 50vh;
+            h1{
+                padding-top: 4.5em;
+            }
+        }
+
+        .photography{
+            h1{
+                padding-top: 6em;
+            }
+        }
+
+        .testimonials{
+            .container-fluid{
+                h1{
+                    font-size: 1.3em;
+                }
+            }
+        }
+
+        .footer{
+            .options{
+                padding-left: 7em;
+                padding-right: 7em;
+            }
+            .contact{
+                padding: 2em 12em;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 767.9px) {
+    .main-nav-container{
+        position: relative;
+    }
+    #main-nav{
+        position: absolute;
+        top: 5em;
+        right: 2em;
+        background-color: var(--font-color);
+        z-index: 1;
+        padding: 2em !important;
+        .menu{
+        width: 100%;
+        }
+        .menu-top {
+            position: absolute;
+            width: 35px;
+            height: 35px;
+            background: linear-gradient(-45deg, var(--font-color) 50%, var(--hero) 50%);
+            top: -12.3%;
+            right: 0;
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .navbar{
+            .container-fluid{
+                .navbar-nav{
+                    .nav-link{
+                    color: var(--desk-links);
+                    font-size: 0.8em;
+                    }
+                    .nav-item{
+                    padding: 0.5em 1em;
+                }
+                }
+                #main-nav{
+                    #contact{
+                    background-color: var(--font-color);
+                    color: var(--links);
+                    padding-top: 1em;
+                    padding-bottom: 1em;
+                    }
+                    #contact-box{
+                    padding-top: 0.3em;
+                    }
+                }
+            }
+    }
+    body{
+        .top{
+            height: 80vw;
+            background-image: url('../images/desktop/image-header.jpg');
+            background-position: center;
+        }
+
+        .transform{
+            .transform2{
+                font-size: 1.8em;
+            }
+        }
+
+        .standout{
+            .standout2{
+                font-size: 1.8em;
+            }
+        }
+
+        .graphot{
+            .graphic{
+                .container-fluid{
+                    font-size: 2.4em;
+                    h1{
+                        padding-top: 10em;
+                    }
+                }
+            }
+        }
+        .photography{
+            .container-fluid{
+                font-size: 2.4em;
+                h1{
+                    padding-top: 10em;
+                }
+            }
+        }
+
+        .testimonials{
+            .container-fluid{
+                .clientdivs{
+                    font-size: 2.85em;
+                    h3{
+                        padding-top: 2em;
+                        font-size: 1.2em;
+                    }
+                }
+            }
+        }
+        .footer{
+            .options{
+                padding-left: 12em;
+                padding-right: 12em;
+            }
+            .contact{
+                padding: 2em 16em;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    body{
+        .top{
+            height: 51vw;
+        }
+        .learn-more{
+            padding: 0 !important;
+            a{
+                padding-bottom: 0;
+                &::before{
+                    left: 30%;
+                    bottom: 1em;
+                }
+            }
+        }
+    }
+    .transform{
+        .container-fluid{
+            display: flex;
+            flex-direction: row-reverse;
+            .transform1{
+                width: 50%;
+            }
+            .transform2{
+                width: 50%;
+                height: 40vw;
+                text-align: left;
+                h1, p, a{
+                    margin: 0;
+                    padding: 0;
+                }
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                h1, p, a{
+                    padding: 1rem 5rem;
+                }
+                h1{
+                    font-size: 1em;
+                }
+                p{
+                    font-size: 0.48em;
+                }
+                a{
+                    font-size: 0.5em;
+                }
+            }
+        }
+    }
+    .standout{
+        .container-fluid{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+
+            .standout2{
+                text-align: left;
+                height: 40vw;
+                h1, p, a{
+                    margin: 0;
+                    padding: 0;
+                }
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                h1, p, a{
+                    padding: 1rem 5rem;
+                }
+                h1{
+                    font-size: 1em;
+                }
+                p{
+                    font-size: 0.5em;
+                }
+                a{
+                    font-size: 0.5em;
+                }
+            }
+        }
+    }
+    .graphot{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            .graphic{
+                background-image: url('../images/desktop/image-graphic-design.jpg');
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+                .container-fluid{
+                    text-align: center;
+                    h1{
+                        font-size: 1.1em;
+                        padding-top: 6em !important;
+                    }
+                    p{
+                        font-size: 0.5em;
+                        padding: 0 3em;
+                    }
+                }
+            }
+    .photography{
+        background-image: url('../images/desktop/image-photography.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        .container-fluid{
+            text-align: center;
+            h1{
+                font-size: 1.1em;
+                padding-top: 6em;
+            }
+            p{
+                font-size: 0.5em;
+                padding: 0 3em;
+            }
+        }
+    }
+    }
+    .testimonials{
+            .container-fluid{
+                h1{
+                    padding-top: 5em;
+                    font-size: 1.5em;
+                }
+                .clientdivs{
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr;
+                    font-size: 1em !important;
+                    padding: 0 1em 5em;
+                }
+                h3{
+                    padding-top: 2em;
+                }
+            }
+        }
+    .collage{
+        .container-fluid{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            //bathayi cone kindaki ellipoindi
+        }
+    }
+    .footer{
+        .options{
+            padding-left: 18em !important;
+            padding-right: 18em !important;
+        }
+        .contact{
+            padding: 2em 22em !important;
+        }
+    }
+}
